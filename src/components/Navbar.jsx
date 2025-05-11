@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { navLinks, cn } from '../lib/utils';
+import { cn } from '../lib/utils';
 import { Menu, X } from 'lucide-react';
 
 // a list of nav item objects with links for navigation within the page to specific divs identified by the id attribute
@@ -29,12 +29,10 @@ export const Navbar = () => {
   }, []);
   return (
     <nav
-      className={
-        (navLinks,
-        isScrolled
-          ? 'py-3 bg-background/80 backdrop-blur-md shadow-xs'
-          : 'py-5')
-      }
+      className={cn(
+        'fixed w-full z-40 transition-all duration-300',
+        isScrolled ? 'py-3 bg-background/80 backdrop-blur-md shadow-xs' : 'py-5'
+      )}
     >
       <div className="container flex items-center justify-between ">
         <a

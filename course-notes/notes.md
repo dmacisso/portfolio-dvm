@@ -184,7 +184,7 @@ In this example, the .card class will have the styles defined by the bg-white, r
         }
 
   Now you can use the class bg-gradient-blue in your HTML.
-
+  
 
   ## Email api for sending a message from the form.
   [Email.js](https://dashboard.emailjs.com/sign-in)

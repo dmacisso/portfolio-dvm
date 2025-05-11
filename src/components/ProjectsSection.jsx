@@ -1,4 +1,10 @@
-import { ArrowRight, ExternalLink, Github, GithubIcon, LinkedinIcon } from 'lucide-react';
+import {
+  ArrowRight,
+  ExternalLink,
+  Github,
+  GithubIcon,
+  LinkedinIcon,
+} from 'lucide-react';
 
 const projects = [
   {
@@ -59,8 +65,11 @@ export const ProjectsSection = () => {
 
               <div className="p-6">
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tags.map((tag) => (
-                    <span className="px-2 py-1 text-xs font-medium rounded-full border bg-secondary text-secondary-foreground">
+                  {project.tags.map((tag, key) => (
+                    <span
+                      key={key}
+                      className="px-2 py-1 text-xs font-medium rounded-full border bg-secondary text-secondary-foreground"
+                    >
                       {tag}
                     </span>
                   ))}
@@ -107,7 +116,6 @@ export const ProjectsSection = () => {
           >
             My LinkedIn <LinkedinIcon size={16} />{' '}
           </a> */}
-          
         </div>
       </div>
     </section>
